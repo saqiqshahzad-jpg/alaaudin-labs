@@ -1,65 +1,64 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion'; // Scroll animations ke liye
-import Typewriter from 'typewriter-effect'; // Typing effect ke liye
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Bot, Cpu, Zap, Mail, Linkedin, Globe } from 'lucide-react';
 import './App.css';
 
-function App() {
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
-
-  // 🖱️ Cursor Movement Capture
-  useEffect(() => {
-    const moveCursor = (e) => setCursorPos({ x: e.clientX, y: e.clientY });
-    window.addEventListener('mousemove', moveCursor);
-    return () => window.removeEventListener('mousemove', moveCursor);
-  }, []);
-
+const App = () => {
   return (
-    <div>
-      {/* 🖱️ Custom Cursor Layer */}
-      <div className="custom-cursor" style={{ left: cursorPos.x, top: cursorPos.y }} />
-
-      {/* 🚀 SECTION 1: Hero (The Welcome) */}
-      <section className="section-box">
-        <motion.h1 
-          initial={{ opacity: 0, scale: 0.5 }} 
-          animate={{ opacity: 1, scale: 1 }} 
-          transition={{ duration: 1 }}
-          style={{ fontSize: '4rem', letterSpacing: '-2px' }}
+    <div className="bento-container">
+      {/* 🚀 HERO SECTION */}
+      <motion.div className="bento-grid">
+        <motion.div 
+          className="card profile-card"
+          initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
         >
-          Muhammad Saqib
-        </motion.h1>
+          <div className="status">🟢 Remote-Ready</div>
+          <h1>Muhammad Saqib</h1>
+          <p className="highlight">AI Automation Specialist</p>
+          <p className="desc">Expert in building intelligent systems that drive real results.</p>
+        </motion.div>
 
-        <div className="typewriter-font" style={{ fontSize: '1.5rem' }}>
-          <Typewriter
-            options={{
-              strings: ['AI Automation Expert', 'Lead Gen Strategist', 'Full Stack Coder'],
-              autoStart: true, loop: true,
-            }}
-          />
+        {/* 🛠️ SERVICES GRID */}
+        <div className="card service-card">
+          <Bot size={32} color="#10b981" />
+          <h3>AI Agents</h3>
+          <p>Autonomous agents that handle tasks & integrate with tools.</p>
         </div>
-      </section>
 
-      {/* 📜 SECTION 2: Work (Scroll Animation Example) */}
-      <motion.section 
-        className="section-box"
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 style={{ fontSize: '3rem' }}>My Elite Builds</h2>
-        <div style={{ marginTop: '20px', padding: '30px', background: '#111', borderRadius: '20px', border: '1px solid #333' }}>
-          <h3>California Real Estate AI 🤖</h3>
-          <p>Secure OTP Verification + 100% Inbox Delivery.</p>
-          <a href="https://carealestateadvisor.online" style={{ color: '#007bff' }}>View Live Demo →</a>
+        <div className="card service-card">
+          <Zap size={32} color="#3b82f6" />
+          <h3>Workflows</h3>
+          <p>End-to-end automation pipelines powered by AI.</p>
         </div>
-      </motion.section>
 
-      {/* Footer / Connect */}
-      <footer style={{ padding: '40px', textAlign: 'center', opacity: 0.5, fontSize: '12px' }}>
-        © 2026 Alaaudin Labs | Built with Passion & AI.
-      </footer>
+        <div className="card service-card">
+          <Cpu size={32} color="#8b5cf6" />
+          <h3>Optimization</h3>
+          <p>Replacing bottlenecks with smart, scalable solutions.</p>
+        </div>
+
+        {/* 📊 STATS / EXPERIENCE */}
+        <div className="card wide-card">
+          <h2>Why Work With Me?</h2>
+          <div className="stats-flex">
+            <div><strong>Direct</strong><p>No middlemen</p></div>
+            <div><strong>Agile</strong><p>Zero overhead</p></div>
+            <div><strong>Fast</strong><p>Quicker delivery</p></div>
+          </div>
+        </div>
+
+        {/* 📧 CONNECT */}
+        <div className="card contact-card">
+          <div className="social-links">
+            <a href="mailto:alaaudin.ai@gmail.com"><Mail /></a>
+            <a href="https://linkedin.com/in/muhammad-saqib-aichatbotdeveloper"><Linkedin /></a>
+            <a href="#"><Globe /></a>
+          </div>
+          <button className="elite-btn">Start a Conversation</button>
+        </div>
+      </motion.div>
     </div>
   );
-}
+};
 
 export default App;
