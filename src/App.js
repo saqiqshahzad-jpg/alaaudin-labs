@@ -13,7 +13,7 @@ const App = () => {
           initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
         >
           <div className="status">🟢 Remote-Ready</div>
-          <h1>Muhammad Saqib</h1>
+          <h1>Muhammad  Saqib</h1>
           <p className="highlight">AI Automation Specialist</p>
           <p className="desc">Expert in building intelligent systems that drive real results.</p>
         </motion.div>
