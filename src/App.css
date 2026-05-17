@@ -1,38 +1,26 @@
-.App {
-  text-align: center;
+/* 🌑 Dark Background & White Selection */
+body {
+  margin: 0; background-color: #050505; color: #ffffff;
+  font-family: 'Inter', sans-serif; overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 🖱️ CUSTOM CURSOR (The "Wow" Part) */
+.custom-cursor {
+  position: fixed; width: 25px; height: 25px;
+  background: #007bff; border-radius: 50%;
+  pointer-events: none; z-index: 9999;
+  mix-blend-mode: difference; transition: transform 0.1s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ✍️ TYPEWRITER FONT STYLE */
+.typewriter-font {
+  font-family: 'Courier New', Courier, monospace;
+  color: #00ff88; font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 🎡 SMOOTH SECTION BOX */
+.section-box {
+  min-height: 80vh; display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  padding: 50px; border-bottom: 1px solid #222;
 }
