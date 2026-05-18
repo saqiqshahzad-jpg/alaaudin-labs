@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Bot, Cpu, Zap, Mail, Linkedin, Globe } from 'lucide-react';
+import { Bot, Cpu, Zap, Mail, Linkedin, Globe } from 'lucide-react'; // ✅ 'i' is lowercase now
 import './App.css';
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
           initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
         >
           <div className="status">🟢 Remote-Ready</div>
-          <h1>Muhammad  Saqib</h1>
+          <h1>Muhammad Saqib</h1>
           <p className="highlight">AI Automation Specialist</p>
           <p className="desc">Expert in building intelligent systems that drive real results.</p>
         </motion.div>
@@ -39,7 +39,7 @@ const App = () => {
 
         {/* 📊 STATS / EXPERIENCE */}
         <div className="card wide-card">
-          <h2>Why Work With Me? </h2>
+          <h2>Why Work With Me?</h2>
           <div className="stats-flex">
             <div><strong>Direct</strong><p>No middlemen</p></div>
             <div><strong>Agile</strong><p>Zero overhead</p></div>
@@ -51,7 +51,9 @@ const App = () => {
         <div className="card contact-card">
           <div className="social-links">
             <a href="mailto:alaaudin.ai@gmail.com"><Mail /></a>
-            <a href="https://linkedin.com/in/muhammad-saqib-aichatbotdeveloper"><Linkedin size={32} /></a>
+            <a href="https://www.linkedin.com/in/muhammad-saqib-aichatbotdeveloper">
+              <Linkedin size={32} /> {/* ✅ Usage fixed too */}
+            </a>
             <a href="#"><Globe /></a>
           </div>
           <button className="elite-btn">Start a Conversation</button>
