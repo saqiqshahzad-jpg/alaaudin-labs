@@ -39,7 +39,7 @@ const App = () => {
 
         {/* 📊 STATS / EXPERIENCE */}
         <div className="card wide-card">
-          <h2>Why Work With Me?</h2>
+          <h2>Why Work With Me? </h2>
           <div className="stats-flex">
             <div><strong>Direct</strong><p>No middlemen</p></div>
             <div><strong>Agile</strong><p>Zero overhead</p></div>
@@ -51,7 +51,7 @@ const App = () => {
         <div className="card contact-card">
           <div className="social-links">
             <a href="mailto:alaaudin.ai@gmail.com"><Mail /></a>
-            <a href="https://linkedin.com/in/muhammad-saqib-aichatbotdeveloper"><Linkedin /></a>
+            <a href="https://linkedin.com/in/muhammad-saqib-aichatbotdeveloper"><Linkedin size={32} /></a>
             <a href="#"><Globe /></a>
           </div>
           <button className="elite-btn">Start a Conversation</button>
