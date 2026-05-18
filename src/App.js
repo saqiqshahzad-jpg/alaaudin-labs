@@ -73,7 +73,7 @@ const App = () => {
               <p>A fully autonomous AI assistant that qualifies leads, books appointments, and answers property queries in real-time. Secure OTP verification + 100% Inbox Delivery.</p>
               <div className="tech-stack"><span>Custom LLM</span><span>Automation Flow</span><span>Web App</span></div>
               <a href="https://carealestateadvisor.online" target="_blank" rel="noreferrer" className="live-demo-btn" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
-                <MessageSquare size={18} /> Test The AI Bot Now <ExternalLink size={16} />
+                <MessageSquare size={16} /> Test The AI Bot Now <ExternalLink size={16} />
               </a>
             </div>
             
@@ -83,7 +83,7 @@ const App = () => {
                     <span className="dot red"></span><span className="dot yellow"></span><span className="dot green"></span>
                   </div>
                   <div className="mockup-body">
-                     <p className="ai-chat">Hi! I'm your Real Estate AI. How can I help you find your dream home today? ✨</p>
+                     <p className="ai-chat">Hello! I'm CA Real Estate ADVISOR. How can I help you today? ✨</p>
                      <p className="user-chat">I'm looking for a 3-bed house in Los Angeles.</p>
                      <p className="ai-chat">Perfect! Let me instantly find the best luxury listings for you...</p>
                   </div>

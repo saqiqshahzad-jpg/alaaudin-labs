@@ -110,7 +110,7 @@ body {
 .project-content p { color: #a1a1aa; font-size: 1.15rem; line-height: 1.8; margin-bottom: 35px; max-width: 90%; }
 
 .live-demo-btn {
-  display: inline-flex; align-items: center; gap: 12px;
+  display: inline-flex; align-items: center; gap: 10px;
   background: linear-gradient(135deg, var(--primary-glow), var(--secondary-glow)); color: white;
   padding: 18px 36px; border-radius: 14px; font-weight: 800; font-size: 1.1rem;
   text-decoration: none; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
