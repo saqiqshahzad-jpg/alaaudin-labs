@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { Bot, Cpu, Zap, Mail, ArrowRight, Code, Rocket, CheckCircle } from 'lucide-react';
+import { motion, useScroll } from 'framer-motion';
+import { Bot, Cpu, Zap, Mail, ArrowRight, Code, CheckCircle } from 'lucide-react';
 import './App.css';
 
 const App = () => {
@@ -18,7 +18,6 @@ const App = () => {
 
   // 📜 SCROLL ANIMATIONS
   const { scrollYProgress } = useScroll();
-  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
   return (
     <div className="elite-wrapper">
