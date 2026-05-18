@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Bot, Cpu, Zap, Mail, ArrowRight, Code, CheckCircle } from 'lucide-react';
+import { Bot, Cpu, Zap, Mail, ArrowRight, Code, CheckCircle, MessageSquare, ExternalLink } from 'lucide-react';
 import './App.css';
 
 const App = () => {
@@ -70,7 +70,44 @@ const App = () => {
           </motion.div>
         </section>
 
-        {/* 🍱 2. BENTO GRID SERVICES */}
+        {/* 🌟 2. FEATURED PROJECT (NEW: REAL ESTATE BOT) */}
+        <section className="featured-project-section">
+          <motion.div
+            className="project-glass-card"
+            initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }} viewport={{ once: true }}
+          >
+            <div className="project-content">
+              <div className="project-badge"><span className="pulse-dot-blue"></span> Live AI Demo</div>
+              <h2>California Real Estate AI 🏠🤖</h2>
+              <p>A fully autonomous AI assistant that qualifies leads, books appointments, and answers property queries in real-time. Secure OTP verification + 100% Inbox Delivery.</p>
+              <div className="tech-stack"><span>Custom LLM</span><span>Automation Flow</span><span>Web App</span></div>
+              <a
+                href="https://carealestateadvisor.online"
+                target="_blank" rel="noreferrer"
+                className="live-demo-btn"
+                onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}
+              >
+                <MessageSquare size={18} /> Test The AI Bot Now <ExternalLink size={16} />
+              </a>
+            </div>
+            
+            {/* 📱 Mockup Visual of the Bot */}
+            <div className="project-visual">
+               <div className="mockup-window">
+                  <div className="mockup-header">
+                    <span className="dot red"></span><span className="dot yellow"></span><span className="dot green"></span>
+                  </div>
+                  <div className="mockup-body">
+                     <p className="ai-chat">Hi! I'm your Real Estate AI. How can I help you find your dream home today? ✨</p>
+                     <p className="user-chat">I'm looking for a 3-bed house in Los Angeles.</p>
+                     <p className="ai-chat">Perfect! Let me instantly find the best luxury listings for you...</p>
+                  </div>
+               </div>
+            </div>
+          </motion.div>
+        </section>
+
+        {/* 🍱 3. BENTO GRID SERVICES */}
         <section className="services-section">
           <motion.div 
             initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }} viewport={{ once: true }}
@@ -81,25 +118,14 @@ const App = () => {
           </motion.div>
 
           <div className="bento-master-grid">
-            
-            {/* Bento Box 1 */}
-            <motion.div 
-              className="bento-box glass-card box-large"
-              whileHover={{ y: -10, scale: 1.02 }} transition={{ type: "spring", stiffness: 300 }}
-              onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}
-            >
+            <motion.div className="bento-box glass-card box-large" whileHover={{ y: -10, scale: 1.02 }} onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
               <div className="icon-wrapper green-glow"><Bot size={36} /></div>
               <h3>AI Agents</h3>
               <p>Autonomous agents that handle tasks, make decisions, and integrate seamlessly with your existing tools.</p>
               <div className="tech-stack"><span>Custom Bots</span><span>Decision Logic</span></div>
             </motion.div>
 
-            {/* Bento Box 2 */}
-            <motion.div 
-              className="bento-box glass-card box-tall"
-              whileHover={{ y: -10, scale: 1.02 }} transition={{ type: "spring", stiffness: 300 }}
-              onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}
-            >
+            <motion.div className="bento-box glass-card box-tall" whileHover={{ y: -10, scale: 1.02 }} onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
               <div className="icon-wrapper blue-glow"><Zap size={36} /></div>
               <h3>Automation Flows</h3>
               <p>No-code and low-code workflows that completely eliminate repetitive manual work.</p>
@@ -110,32 +136,21 @@ const App = () => {
               </ul>
             </motion.div>
 
-            {/* Bento Box 3 */}
-            <motion.div 
-              className="bento-box glass-card"
-              whileHover={{ y: -10, scale: 1.02 }} transition={{ type: "spring", stiffness: 300 }}
-              onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}
-            >
+            <motion.div className="bento-box glass-card" whileHover={{ y: -10, scale: 1.02 }} onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
               <div className="icon-wrapper purple-glow"><Cpu size={36} /></div>
               <h3>Optimization</h3>
               <p>Identifying bottlenecks and replacing them with smart, scalable solutions.</p>
             </motion.div>
 
-            {/* Bento Box 4 */}
-            <motion.div 
-              className="bento-box glass-card"
-              whileHover={{ y: -10, scale: 1.02 }} transition={{ type: "spring", stiffness: 300 }}
-              onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}
-            >
+            <motion.div className="bento-box glass-card" whileHover={{ y: -10, scale: 1.02 }} onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
               <div className="icon-wrapper orange-glow"><Code size={36} /></div>
               <h3>Data Pipelines</h3>
               <p>Seamless data movement and transformation between platforms.</p>
             </motion.div>
-
           </div>
         </section>
 
-        {/* 🏆 3. THE "WHY ME" SECTION */}
+        {/* 🏆 4. THE "WHY ME" SECTION */}
         <section className="why-me-section">
            <motion.div 
              className="glass-banner"
@@ -145,23 +160,14 @@ const App = () => {
               <p>As a self-employed specialist, I bring the speed and flexibility that agencies can't match. Direct collaboration, zero overhead, and full accountability.</p>
               
               <div className="stats-container">
-                 <div className="stat-item">
-                    <h4>Direct</h4>
-                    <span>No middlemen, no delays</span>
-                 </div>
-                 <div className="stat-item">
-                    <h4>Custom</h4>
-                    <span>Built for your specific stack</span>
-                 </div>
-                 <div className="stat-item">
-                    <h4>Fast</h4>
-                    <span>Quicker delivery, high quality</span>
-                 </div>
+                 <div className="stat-item"><h4>Direct</h4><span>No middlemen, no delays</span></div>
+                 <div className="stat-item"><h4>Custom</h4><span>Built for your specific stack</span></div>
+                 <div className="stat-item"><h4>Fast</h4><span>Quicker delivery, high quality</span></div>
               </div>
            </motion.div>
         </section>
 
-        {/* 📧 4. FOOTER / CONTACT */}
+        {/* 📧 5. FOOTER / CONTACT */}
         <footer className="footer-section">
           <h2>Ready to Automate?</h2>
           <p>Let's eliminate repetitive tasks and integrate AI into your business.</p>
@@ -171,16 +177,11 @@ const App = () => {
             </a>
             <a href="https://www.linkedin.com/in/muhammad-saqib-aichatbotdeveloper" target="_blank" rel="noreferrer" className="social-pill" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-              LinkedIn
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+              </svg> LinkedIn
             </a>
           </div>
-          <div className="footer-bottom">
-            © 2026 Muhammad Saqib | AI Automation Specialist
-          </div>
+          <div className="footer-bottom">© 2026 Muhammad Saqib | AI Automation Specialist</div>
         </footer>
 
       </div>
